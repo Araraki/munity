@@ -72,28 +72,36 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(OpenGL_includes);$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(OpenGL_libs);$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(OpenGL_includes);$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(OpenGL_libs);$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(OpenGL_includes);</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OpenGL_libs);</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;assimp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -112,7 +120,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -120,12 +128,16 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(OpenGL_includes);</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OpenGL_libs);</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;assimp.lib;freetype.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -147,17 +159,68 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="targetver.h" />
+    <ClInclude Include="src\base\object.h" />
+    <ClInclude Include="src\base\renderer_object.h" />
+    <ClInclude Include="src\base\singleton.h" />
+    <ClInclude Include="src\munity\camera.h" />
+    <ClInclude Include="src\munity\game_objects.h" />
+    <ClInclude Include="src\munity\global.h" />
+    <ClInclude Include="src\munity\input.h" />
+    <ClInclude Include="src\munity\light.h" />
+    <ClInclude Include="src\munity\mesh.h" />
+    <ClInclude Include="src\munity\model.h" />
+    <ClInclude Include="src\munity\text.h" />
+    <ClInclude Include="src\munity\texture.h" />
+    <ClInclude Include="src\munity\ui.h" />
+    <ClInclude Include="src\opengl\opengl.h" />
+    <ClInclude Include="src\opengl\shader.h" />
+    <ClInclude Include="src\tools\std_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Munity.cpp" />
-    <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
+    <ClCompile Include="src\base\object.cpp" />
+    <ClCompile Include="src\base\renderer_object.cpp" />
+    <ClCompile Include="src\munity.cpp" />
+    <ClCompile Include="src\munity\camera.cpp" />
+    <ClCompile Include="src\munity\game_objects.cpp" />
+    <ClCompile Include="src\munity\global.cpp" />
+    <ClCompile Include="src\munity\input.cpp" />
+    <ClCompile Include="src\munity\light.cpp" />
+    <ClCompile Include="src\munity\mesh.cpp" />
+    <ClCompile Include="src\munity\model.cpp" />
+    <ClCompile Include="src\munity\text.cpp" />
+    <ClCompile Include="src\munity\texture.cpp" />
+    <ClCompile Include="src\munity\ui.cpp" />
+    <ClCompile Include="src\opengl\glad.cpp" />
+    <ClCompile Include="src\opengl\opengl.cpp" />
+    <ClCompile Include="src\opengl\shader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\shaders\button.frag" />
+    <None Include="res\shaders\button.vert" />
+    <None Include="res\shaders\depth.frag" />
+    <None Include="res\shaders\depth.vert" />
+    <None Include="res\shaders\grass.frag" />
+    <None Include="res\shaders\grass.vert" />
+    <None Include="Res\Shaders\lamp.frag" />
+    <None Include="Res\Shaders\lamp.vert" />
+    <None Include="Res\Shaders\light.frag" />
+    <None Include="Res\Shaders\light.vert" />
+    <None Include="Res\Shaders\one.frag" />
+    <None Include="Res\Shaders\one.vert" />
+    <None Include="res\shaders\outline.frag" />
+    <None Include="res\shaders\outline.vert" />
+    <None Include="Res\Shaders\phong.frag" />
+    <None Include="Res\Shaders\phong.vert" />
+    <None Include="res\shaders\text.frag" />
+    <None Include="res\shaders\text.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Res\Textures\awesomeface.png" />
+    <Image Include="Res\Textures\container.jpg" />
+    <Image Include="Res\Textures\container2.png" />
+    <Image Include="Res\Textures\container2_specular.png" />
+    <Image Include="Res\Textures\wall.jpg" />
+    <Image Include="res\textures\white.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

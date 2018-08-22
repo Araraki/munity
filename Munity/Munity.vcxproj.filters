@@ -13,21 +13,220 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\opengl">
+      <UniqueIdentifier>{c945566f-97fb-433c-8c55-bf8cb046c0be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\opengl">
+      <UniqueIdentifier>{28d70e13-2b1f-45be-9928-a2558cb403a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\tools">
+      <UniqueIdentifier>{59f4c4e8-ddba-4fbe-90df-e4c8887f6ae8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\munity">
+      <UniqueIdentifier>{47e4d7e3-6379-44a5-856b-25c05d7290f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\base">
+      <UniqueIdentifier>{3e90523c-5f32-49ba-9bb9-bf660b73e94a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\base">
+      <UniqueIdentifier>{5eca8b4b-3a18-4d60-aa19-9a83d1b1307a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\munity">
+      <UniqueIdentifier>{ba0cec09-5b59-43d9-99b7-8d77645d1430}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\shaders">
+      <UniqueIdentifier>{f778999e-e26b-459f-a003-9bd2f82e676f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\textures">
+      <UniqueIdentifier>{6df3071a-3da2-42f1-be79-04acaffa530f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\munity\ui">
+      <UniqueIdentifier>{86fc035b-6ac2-4fdb-a28f-2bb14871a3e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\munity\ui">
+      <UniqueIdentifier>{e4f94861-ec4a-4b19-9a93-1a9068ab2017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\munity\core">
+      <UniqueIdentifier>{6883741c-35c2-4dd4-b26f-ce6c9c2a6e43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\munity\core">
+      <UniqueIdentifier>{0d38c0f2-f331-451c-a887-9b339ea6049a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="src\opengl\opengl.h">
+      <Filter>头文件\opengl</Filter>
     </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="src\opengl\shader.h">
+      <Filter>头文件\opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\object.h">
+      <Filter>头文件\base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\singleton.h">
+      <Filter>头文件\base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tools\std_image.h">
+      <Filter>头文件\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\renderer_object.h">
+      <Filter>头文件\base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\munity\text.h">
+      <Filter>头文件\munity\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\munity\ui.h">
+      <Filter>头文件\munity\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\munity\camera.h">
+      <Filter>头文件\munity\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\munity\light.h">
+      <Filter>头文件\munity\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\munity\texture.h">
+      <Filter>头文件\munity\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\munity\model.h">
+      <Filter>头文件\munity\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\munity\mesh.h">
+      <Filter>头文件\munity\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\munity\input.h">
+      <Filter>头文件\munity\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\munity\global.h">
+      <Filter>头文件\munity\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\munity\game_objects.h">
+      <Filter>头文件\munity\core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
+    <ClCompile Include="src\opengl\glad.cpp">
+      <Filter>源文件\opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="src\opengl\opengl.cpp">
+      <Filter>源文件\opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="src\opengl\shader.cpp">
+      <Filter>源文件\opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\object.cpp">
+      <Filter>源文件\base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\munity.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Munity.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="src\base\renderer_object.cpp">
+      <Filter>源文件\base</Filter>
     </ClCompile>
+    <ClCompile Include="src\munity\text.cpp">
+      <Filter>源文件\munity\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\munity\ui.cpp">
+      <Filter>源文件\munity\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\munity\light.cpp">
+      <Filter>源文件\munity\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\munity\camera.cpp">
+      <Filter>源文件\munity\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\munity\input.cpp">
+      <Filter>源文件\munity\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\munity\mesh.cpp">
+      <Filter>源文件\munity\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\munity\model.cpp">
+      <Filter>源文件\munity\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\munity\texture.cpp">
+      <Filter>源文件\munity\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\munity\global.cpp">
+      <Filter>源文件\munity\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\munity\game_objects.cpp">
+      <Filter>源文件\munity\core</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\Shaders\one.frag">
+      <Filter>资源文件\shaders</Filter>
+    </None>
+    <None Include="Res\Shaders\one.vert">
+      <Filter>资源文件\shaders</Filter>
+    </None>
+    <None Include="Res\Shaders\light.frag">
+      <Filter>资源文件\shaders</Filter>
+    </None>
+    <None Include="Res\Shaders\light.vert">
+      <Filter>资源文件\shaders</Filter>
+    </None>
+    <None Include="Res\Shaders\lamp.frag">
+      <Filter>资源文件\shaders</Filter>
+    </None>
+    <None Include="Res\Shaders\lamp.vert">
+      <Filter>资源文件\shaders</Filter>
+    </None>
+    <None Include="Res\Shaders\phong.frag">
+      <Filter>资源文件\shaders</Filter>
+    </None>
+    <None Include="Res\Shaders\phong.vert">
+      <Filter>资源文件\shaders</Filter>
+    </None>
+    <None Include="res\shaders\text.frag">
+      <Filter>资源文件\shaders</Filter>
+    </None>
+    <None Include="res\shaders\text.vert">
+      <Filter>资源文件\shaders</Filter>
+    </None>
+    <None Include="res\shaders\button.frag">
+      <Filter>资源文件\shaders</Filter>
+    </None>
+    <None Include="res\shaders\button.vert">
+      <Filter>资源文件\shaders</Filter>
+    </None>
+    <None Include="res\shaders\depth.frag">
+      <Filter>资源文件\shaders</Filter>
+    </None>
+    <None Include="res\shaders\depth.vert">
+      <Filter>资源文件\shaders</Filter>
+    </None>
+    <None Include="res\shaders\outline.vert">
+      <Filter>资源文件\shaders</Filter>
+    </None>
+    <None Include="res\shaders\outline.frag">
+      <Filter>资源文件\shaders</Filter>
+    </None>
+    <None Include="res\shaders\grass.vert">
+      <Filter>资源文件\shaders</Filter>
+    </None>
+    <None Include="res\shaders\grass.frag">
+      <Filter>资源文件\shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Res\Textures\awesomeface.png">
+      <Filter>资源文件\textures</Filter>
+    </Image>
+    <Image Include="Res\Textures\container.jpg">
+      <Filter>资源文件\textures</Filter>
+    </Image>
+    <Image Include="Res\Textures\wall.jpg">
+      <Filter>资源文件\textures</Filter>
+    </Image>
+    <Image Include="Res\Textures\container2.png">
+      <Filter>资源文件\textures</Filter>
+    </Image>
+    <Image Include="Res\Textures\container2_specular.png">
+      <Filter>资源文件\textures</Filter>
+    </Image>
+    <Image Include="res\textures\white.png">
+      <Filter>资源文件\textures</Filter>
+    </Image>
   </ItemGroup>
 </Project>
